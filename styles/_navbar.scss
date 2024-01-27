@@ -1,0 +1,10 @@
+@use "config/variables" as v;
+.navbar{
+  &-brand{
+    display: flex;
+    align-items: center;
+    img{
+      max-width: 3rem;
+    }
+  }
+}

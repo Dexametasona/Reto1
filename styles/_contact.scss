@@ -1,0 +1,12 @@
+@use "config/variables" as v;
+@use "config/breakpoints" as b;
+@use "config/mixins" as m;
+
+.contact__info{
+  list-style-type: none;
+}
+@include b.breakpoint(md){
+  .formBox{
+    width: 50%;
+  }
+}

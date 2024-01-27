@@ -1,0 +1,19 @@
+@use "main" as *;
+@use "navbar" as *;
+@use "config/variables" as v;
+@use "about" as *;
+@use "course" as *;
+@use "contact" as *;
+@use "config/breakpoints" as b;
+body{
+  background-color: v.$bgColor;
+  &>*{
+    margin-bottom: 3rem !important;
+  }
+  font-family: "Roboto", sans-serif !important;
+}
+@include b.breakpoint(xl){
+  .container{
+    max-width: 1000px;
+  }
+}

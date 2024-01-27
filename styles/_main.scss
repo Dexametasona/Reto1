@@ -1,0 +1,51 @@
+@use "config/variables" as v;
+@use "config/breakpoints" as b;
+.main{
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  background-image: radial-gradient(
+    75% 75% at 50% 50%,
+    #efeff1ff 0%,
+    #9c9b9bff 100%
+  );
+}
+.mainBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+
+  & > * {
+    grid-column: span 2;
+  }
+  &__btn > img {
+    width: 2rem;
+  }
+  &__banner > img {
+    max-width: 100%;
+    display: block;
+  }
+}
+@include b.breakpoint(sm) {
+  .mainBox__boxTitle {
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: flex-end;
+  }
+  .mainBox__banner {
+    grid-area: 1 / 2 / 3 / 3;
+    justify-self: flex-start;
+  }
+  .mainBox__boxInfo {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+@include b.breakpoint(lg) {
+  .mainBox {
+    &__title {
+      font-size: 4rem !important;
+    }
+    &__banner > img {
+      width: 75%;
+    }
+  }
+}

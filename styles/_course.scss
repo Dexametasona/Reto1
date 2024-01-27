@@ -1,0 +1,16 @@
+@use "config/variables" as v;
+@use "config/breakpoints" as b;
+@use "config/mixins" as m;
+.course .list{
+  list-style-type: none;
+}
+.boxRight{
+  display: grid;
+  place-items: center;
+  
+}
+@include b.breakpoint(lg){
+  .boxRight{
+    max-width: 50%;
+  }
+}
