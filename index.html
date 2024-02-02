@@ -132,36 +132,48 @@
     <div class="container d-md-flex justify-content-evenly">
       <div class="formBox">
         <h3 class="text-light text-center mb-3">Dejame un mensaje</h3>
-        <form>
+        <form id="formContact"  >
           <div class="input-group mb-3">
-            <span class="input-group-text bi bi-person" id="basic-addon1"></span>
+            <span class="input-group-text bi bi-person" id="name"></span>
             <input 
+            id="name"
+            required
             type="text" 
             class="form-control" 
             placeholder="Nombre" 
             aria-label="Username" 
             aria-describedby="basic-addon1">
+            <div class="invalid-feedback">Campo requerido</div>
           </div>
           <div class="input-group mb-3">
-            <span class="input-group-text bi bi-envelope-at" id="basic-addon1"></span>
-            <input 
+            <span class="input-group-text bi bi-envelope-at" id="email"></span>
+            <input
+            id="email"
+            required
             type="email" 
             class="form-control" 
             placeholder="example@gmail.com" 
             aria-label="email"
             aria-describedby="basic-addon1">
+            <div class="invalid-feedback">Campo requerido</div>
           </div>
           <div class="input-group mb-3">
             <textarea 
+            required
             type="text" 
             class="form-control" 
             rows="5"
             placeholder="Escribe tu mensaje ..." 
             aria-label="mensaje" 
             aria-describedby="basic-addon1"></textarea>
+            <div class="invalid-feedback">Campo requerido</div>
           </div>
-          <button type="submit" class="btn btn-secondary">Enviar</button>
+          <button onclick="validateFields(event)" 
+          type="submit" class="btn btn-secondary">Enviar</button>
         </form>
+        <div class="alert alert-primary mt-1 hidden" id="successMessage" role="alert">
+          Mensaje enviado exitosamente.
+        </div>
         <hr class="d-md-none">
       </div>
       <ul class="contact__info ps-0">
@@ -190,5 +202,6 @@
 </footer>
 <!-- bootstrap integration -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="index.js" ></script>
 </body>
 </html>

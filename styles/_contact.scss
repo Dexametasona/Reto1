@@ -5,6 +5,9 @@
 .contact__info{
   list-style-type: none;
 }
+.hidden{
+  display: none;
+}
 @include b.breakpoint(md){
   .formBox{
     width: 50%;
