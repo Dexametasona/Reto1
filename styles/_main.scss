@@ -20,12 +20,18 @@
   &__btn > img {
     width: 2rem;
   }
-  &__banner > img {
-    max-width: 100%;
-    display: block;
+  &__banner {
+    img {
+      margin: auto;
+      max-width: 50%;
+      display: block;
+    }
   }
 }
 @include b.breakpoint(sm) {
+  .mainBox__banner>img{
+    max-width: 100%;
+  }
   .mainBox__boxTitle {
     grid-area: 1 / 1 / 2 / 2;
     align-self: flex-end;

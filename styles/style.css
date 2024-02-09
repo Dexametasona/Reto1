@@ -15,12 +15,16 @@
 .mainBox__btn > img {
   width: 2rem;
 }
-.mainBox__banner > img {
-  max-width: 100%;
+.mainBox__banner img {
+  margin: auto;
+  max-width: 50%;
   display: block;
 }
 
 @media (min-width: 576px) {
+  .mainBox__banner > img {
+    max-width: 100%;
+  }
   .mainBox__boxTitle {
     grid-area: 1/1/2/2;
     align-self: flex-end;
